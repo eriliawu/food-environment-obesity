@@ -3,7 +3,7 @@
 I'm trained as an economist with a focus on quantitative analyses. Programming skills are just a tool I picked up along the way to facilitate my research, which is to say (obviously) I'm not a computer scientist, and my codes could (definitely) use some more efficiency here and there. It took me a while to figure out looping the 200-something lines of codes into the script I ended up with, so everything is still very much a learning process, as well as a reminder to myself to always look for a more efficient solution, instead of settling for the easiest route.
 
 ## purpose
-Using `nncross` function in R to calculate euclidean distance between points, with food environment and childhood obesity project as an example. This particular project aims to find associations between school-age students' weight outcomes (i.e. the likelihood of being overweight or obese) and their nearby food environment (what's the nearest food outlet and how many food outlets are accessible within a certain distance).
+Using `nncross` function in R package `spatstat` to calculate euclidean distance between points, with food environment and childhood obesity project as an example. This particular project aims to find associations between school-age students' weight outcomes (i.e. the likelihood of being overweight or obese) and their nearby food environment (what's the nearest food outlet and how many food outlets are accessible within a certain distance).
 
 ## data sources
 There are several data sources involved:
