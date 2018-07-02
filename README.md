@@ -7,5 +7,5 @@ There are several data sources involved:
 3) food retailers of all types. In New York State, Department of Agriculture inspects every food retailer at least once every 18 months. The inspectors not only hand out a grade, but also record the address and number of square footage of each store, such as a supermarket, a pharmacy and a corner store.
 
 Both the restaurant grading data from DOHMH and food retailer data from NYS Dept of Agriculture are from open source. They can be found:
-https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j
-https://data.ny.gov/Economic-Development/Retail-Food-Store-Inspections-Current-Ratings/d6dy-3h7r
+1) https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j
+2) https://data.ny.gov/Economic-Development/Retail-Food-Store-Inspections-Current-Ratings/d6dy-3h7r
