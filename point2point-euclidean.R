@@ -46,5 +46,4 @@ for (i in c("09", "10", "11", "12", "13")) {
       school.all <- rbind(school.all, school)
 }
 
-school.all <- school.all[, -c(1, 3)]
 write.csv(school.all, file="school_nearest_food_outlet.csv")
