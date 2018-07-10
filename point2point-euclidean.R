@@ -1,17 +1,10 @@
 # School Food Environment
 # fast food free zone paper
 
-setwd("S:/Personal/hw1220/FF free zone")
+setwd("C:/Personal/hw1220/FF free zone")
 
 ### load packages ----
-suppressWarnings(library(sp))
 suppressWarnings(library(spatstat))
-suppressWarnings(library(maptools))
-suppressWarnings(library(rgeos))
-suppressWarnings(library(rgdal))
-suppressWarnings(library(spdep))
-suppressWarnings(library(measurements)) #to convert imperial/metric units
-suppressWarnings(library(readstata13)) #I wish economists didnt like stata this much
 
 ### calculate distance to nearest food outlet ----
 school.all <- NULL
@@ -19,7 +12,7 @@ school.all <- NULL
 # for each year of food sources, separate into 4 outlet types
 for (i in c("09", "10", "11", "12", "13")) {
       # read school address data
-      school <- read.csv("xy-coord_2009-2013.csv", stringsAsFactors=FALSE)
+      school <- read.csv("schools.csv", stringsAsFactors=FALSE)
       school <- school[school$year==2000+as.numeric(i), ]
       school <- na.omit(school)
       school <- school[!duplicated(school), ]
@@ -37,9 +30,8 @@ for (i in c("09", "10", "11", "12", "13")) {
             food1 <- ppp(food1$x, food1$y, 
                         window=owin(xrange=c(0, max(food1$x)), 
                                     yrange=c(0, max(food1$y))))
-            dist <- nncross(coords, food1)
+            dist <- nncross(coords, food1, what="dist") # see nncross help file for output
             colnames(dist)[1] <- j
-            dist$which <- NULL # see nncross help file for output
             school <- cbind(school, dist)
             #school1$year <- 2000+as.numeric(i)
       }
