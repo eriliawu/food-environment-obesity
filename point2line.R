@@ -27,7 +27,7 @@ for (i in c("09", "10", "11", "12", "13")) {
       # cleaning up
       dist <- t(dist) #transpose
       dist <- as.data.frame(dist)
-      dist$bldgToSt <- apply(dist[ , ], 1, min) #get row min
+      dist$bldgToSt <- apply(dist, 1, min) #get row min
       n <- dim(dist)[2] #index the last column of data frame
       dist <- dist[, n] #only keep row min
       school <- cbind(school, dist)
