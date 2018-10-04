@@ -1,7 +1,7 @@
 # School Food Environment
 # fast food free zone paper
 
-setwd("C:/Personal/hw1220/FF free zone")
+setwd("school-food-environment")
 
 ### load packages ----
 suppressWarnings(library(spatstat))
@@ -23,7 +23,7 @@ for (i in c("09", "10", "11", "12", "13")) {
                                  yrange=c(0, max(school$y))))
       
       # read food outlet data
-      food <- read.csv(paste("H:/Personal/food environment paper 1/restaurants/restaurants", i, ".csv", sep = ""), stringsAsFactors=FALSE)
+      food <- read.csv(paste("restaurants", i, ".csv", sep = ""), stringsAsFactors=FALSE)
       food <- na.omit(food)
       for (j in c("FFOR", "BOD", "WS", "C6P")) { #separate food outlets into 4 diff types and calculate dist to nearest of each type
             food1 <- food[food$cat2==j, ]
